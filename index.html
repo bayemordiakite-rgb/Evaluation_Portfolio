@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+    .section-card{
+        @apply bg-white rounded-2xl shadow-xl p-8;
+    }
+</style>
 </head>
-<body class="bg-slate-300">
+<body class="bg-slate-100 text-slate-800 scroll-smooth" data-aos-easing="ease" data-aos-duration="1000" opacity-0 animate-fadeIn>
+  <script>
+  AOS.init();
+</script>
+<style>
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1.5s forwards;
+}
+</style>
   <!-- Navbar -->
-    <nav class="bg-slate-900 text-white shadow-lg">
+   <button id="darkModeBtn"
+class="bg-cyan-500 px-4 py-2 rounded-lg hover:bg-cyan-600 transition">
+🌙
+</button>
+    <nav class="bg-slate-900/90 backdrop-blur-md text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between px-6 py-4">
 
             <!-- Logo -->
@@ -22,7 +49,7 @@
             <label for="toggleNavbar"
                 class="md:hidden flex items-center gap-2 border border-current px-4 py-2 rounded-lg cursor-pointer hover:bg-slate-700 transition">
 
-                <svg xmlns="http://www.w3.org/2000/svg"*
+                <svg xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -45,42 +72,41 @@
                 md:static md:flex md:flex-row md:w-auto md:bg-transparent md:py-0">
 
                 <li>
-                    <a href="#"
+                    <a href="#accueil"
                         class="px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
-                        Presentations
+                        Accueil
                     </a>
                 </li>
 
                 <li>
-                    <a href="#"
+                    <a href="#apropos"
                         class="px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
                         A propos
                     </a>
                 </li>
 
                 <li>
-                    <li>
-                    <a href="#Formations"
+                    <a href="#formations"
                         class="px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
                         Formations
                     </a>
                 </li>
 
-                    <a href="#"
+                    <a href="#competences"
                         class="px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
                         Competences
                     </a>
                 </li>
 
                 <li>
-                    <a href="#"
+                    <a href="#experiences"
                         class="px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
                         Experiences
                     </a>
                 </li>
 
                 <li>
-                    <a href="#"
+                    <a href="#contact"
                         class="px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
                         Contact
                     </a>
@@ -90,18 +116,40 @@
 
         </div>
     </nav>
-    <h1 class="text-4xl bg-slate-300 font-bold text-center my-5 text-balance text-slate-800">DEVELOPPEUR WEB FREELANCE</h1>
-    <img src="profil.jpg" alt="Profil" class="w-32 h-32 rounded-full mx-auto mt-10">
-    <div class="container mx-auto px-6 py-8 bg-slate-300">
+    <section id="accueil" class="text-center py-16">
+    <img src="profil.jpg"
+         alt="Profil"
+         class="w-40 h-40 rounded-full mx-auto border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300">
+
+    <h1 class="text-5xl font-extrabold mt-6 text-slate-900">
+        BAYE MOR
+    </h1>
+
+    <p id="typing" class="text-cyan-600 text-xl mt-3 font-semibold">
+    </p>
+
+    <p class="max-w-2xl mx-auto mt-5 text-slate-600">
+        Création de sites web modernes, rapides et responsives pour entreprises et particuliers.
+    </p>
+
+    <a href="#contact"
+       class="inline-block mt-8 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl shadow-lg transition duration-300">
+       Me contacter
+    </a>
+</section>
+    <div id="apropos" class="container mx-auto px-6 py-8 bg-slate-300">
         <h1 class="text-3xl font-bold text-center mb-4">A propos de moi</h1>
-        <p class="text-lg text-center bg-slate-100 p-4 rounded-lg shadow-xl">
+      <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+        <p class="text-lg leading-8 text-center text-slate-700">
            bienvenue sur mon portfolio ! Je suis développeur web freelance spécialisé dans la création de sites modernes, rapides et responsives.
            J’aide les entreprises et particuliers à développer leur présence en ligne avec des solutions professionnelles et adaptées à leurs besoins.
         </p>
+      </div>
     </div>
-    <div class="container mx-auto px-6 py-8 bg-slate-300">
-        <h1 class="text-3xl font-bold text-center mb-4">Formations</h1>
-        <p class="text-lg text-center bg-slate-100 p-4 rounded-lg shadow-xl">
+    <div id="formations" class="container mx-auto px-6 py-8 bg-slate-300">
+        <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+        <h1 class="text-3xl font-bold  text-center mb-4">Formations</h1>
+        <p class="text-lg text-center p-4 rounded-lg shadow-xl">
             Je suis un développeur web passionné avec une solide formation en informatique. J'ai obtenu un diplôme en développement web de l'Université XYZ, où j'ai acquis des compétences approfondies en HTML, CSS, JavaScript, et divers frameworks modernes. En plus de ma formation académique, j'ai suivi plusieurs cours en ligne et participé à des ateliers pour rester à jour avec les dernières tendances et technologies du développement web.
         </p>
     </div>
@@ -114,222 +162,140 @@
     </h1>
 
     <!-- STACK -->
-    <div class="flex flex-wrap gap-6 justify-center mt-8 container mx-auto px-6 py-8 bg-slate-100 rounded-lg shadow-xl">
+    <div id="competences" class="flex flex-wrap gap-6 justify-center mt-8 container mx-auto px-6 py-8 bg-slate-100 rounded-lg shadow-xl">
+
+      <div class="skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
+JavaScript
+</div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
-        JavaScript
+                  skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
+                        TypeScript
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
-        TypeScript
+            skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
+                
+                          React
       </div>
 
-      <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
-        React
-      </div>
+      <div class="skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
 
-      <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
         Next.js
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
+skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
         Node.js
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
+skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
         PostgreSQL
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
+skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
         MongoDB
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
+         skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
         Docker
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
+skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
         REST APIs
       </div>
 
       <div class="
-        bg-[#2f9c95]
-        text-white
-        px-1
-        py-3
-        rounded-lg
-        text-xs
-        font-bold
-        uppercase
-        tracking-wide
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      ">
+skill-card bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-2xl text-sm font-bold tracking-wide shadow-lg transition-all duration-300 cursor-pointer">
         GraphQL
       </div>
 
     </div>
   </div>
 </section>
-<div class="container mx-auto px-6 py-8 bg-slate-300">
+
+<div id="experiences" class="container mx-auto px-6 py-8 bg-slate-300">
         <h1 class="text-3xl font-bold text-center mb-4">Expériences</h1>
         <p class="text-lg text-center bg-slate-100 p-4 rounded-lg shadow-xl">
             J'ai travaillé sur divers projets en tant que développeur web freelance, collaborant avec des clients de différentes industries pour créer des sites web performants et esthétiques. Mon expérience inclut la création de sites e-commerce, de blogs, et d'applications web personnalisées, en utilisant les dernières technologies pour garantir une expérience utilisateur optimale. <br><br>
-            PROJET 1 : Création d’un site moderne pour un restaurant avec menu interactif et réservation en ligne.
-
-            Technologies : HTML, Tailwind CSS, JavaScript <br><br>
-            PROJET 2 : Développement d’un site e-commerce responsive avec panier et système de paiement.
-
-            Technologies : React, Node.js
+            
         </p>
-        
+ </div>   
+ <section class="container mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-center mb-10">
+        Mes Projets
+    </h1>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300">
+            <img src="boutiqueCrampon.png" class="w-full">
+
+            <div class="p-6">
+                <h2 class="text-2xl font-bold">
+                    Site de vente de crampons
+                </h2>
+
+                <p class="mt-4 text-slate-600">
+                    Création d’un site de vente de crampons pour les passionnés de football, avec un design moderne et une navigation intuitive. Le site propose une large gamme de produits, des descriptions détaillées et un processus de commande simple pour offrir une expérience d'achat agréable.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
+    <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300">
+            <img src="siteMaillot.png" class="w-full">
+
+            <div class="p-6">
+                <h2 class="text-2xl font-bold">
+                    Site de vente de maillots
+                </h2>
+
+                <p class="mt-4 text-slate-600">
+                    Développement d’un site de vente de maillots de football pour les clubs et les fans, avec un design attrayant et une interface utilisateur conviviale. Le site permet aux utilisateurs de naviguer facilement dans la gamme de produits, de voir les détails des maillots et de procéder à leurs achats en toute simplicité.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+ <section class="py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 id="clients" class="text-5xl font-bold text-cyan-500">0</h2>
+            <p class="mt-4">Clients</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 id="projects" class="text-5xl font-bold text-cyan-500">0</h2>
+            <p class="mt-4">Projets</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 id="experience" class="text-5xl font-bold text-cyan-500">0</h2>
+            <p class="mt-4">Années d'expérience</p>
+        </div>
+
+    </div>
+</section>   
+        <div id="contact" class="container mx-auto px-6 py-8 bg-slate-100">
               <!-- contact -->
              <h1 class="text-3xl font-bold text-center mb-4 mt-10">Contact</h1>
           <p class="text-lg text-center bg-slate-100 p-4 rounded-lg shadow-xl">
-              Vous souhaitez discuter d'un projet ou en savoir plus sur mes services ? N'hésitez pas à me contacter ! <br><br>
-              📞 Contact <br><br>
+              Vous souhaitez discuter d'un projet ou en savoir plus sur mes services ? N'hésitez pas à me contacter !  <br><br>
 
               📧 Email : bayemordiakite@gmail.com <br>
 
-              📱 Téléphone : +221 XX XXX XX XX <br>
+              📱 Téléphone : +221 77 438 12 35 <br>
               💻 GitHub : github.com/bayemordiakite-rgb <br>
             
 
@@ -339,13 +305,112 @@
     </div>
   </div>
 </section>
-<footer>
-  <div class="container mx-auto px-6 py-8 bg-gray-800 text-white shadow-xl">
+<footer class="mt-20">
+  <div class="bg-slate-900 text-white py-8">
     <p class="text-center text-lg">
       &copy; 2024 BAYE MOR. Tous droits réservés.
     </p>
   </div>
 </footer>
+<script>
+const text = "Développeur Web Freelance";
+let index = 0;
 
+function typingEffect() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typingEffect, 100);
+    }
+}
+
+typingEffect();
+</script>
+<button id="topBtn"
+class="hidden fixed bottom-5 right-5 bg-cyan-500 text-white p-4 rounded-full shadow-lg hover:bg-cyan-600 transition">
+↑
+</button>
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        topBtn.classList.remove("hidden");
+    } else {
+        topBtn.classList.add("hidden");
+    }
+});
+
+topBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+<script>
+const sections = document.querySelectorAll("section, div[id]");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("bg-cyan-500");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("bg-cyan-500");
+        }
+    });
+});
+</script>
+<script>
+const skills = document.querySelectorAll(".skill-card");
+
+skills.forEach(skill => {
+    skill.addEventListener("mousemove", () => {
+        skill.style.transform = "scale(1.1) rotate(2deg)";
+    });
+
+    skill.addEventListener("mouseleave", () => {
+        skill.style.transform = "scale(1) rotate(0)";
+    });
+});
+</script>
+<script>
+const darkBtn = document.getElementById("darkModeBtn");
+
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("bg-slate-900");
+    document.body.classList.toggle("text-gray-300");
+});
+</script>
+<script>
+function counter(id, start, end, speed) {
+    let obj = document.getElementById(id);
+    let current = start;
+
+    let interval = setInterval(() => {
+        current++;
+        obj.textContent = current;
+
+        if (current >= end) {
+            clearInterval(interval);
+        }
+    }, speed);
+}
+
+counter("clients", 0, 20, 80);
+counter("projects", 0, 35, 50);
+counter("experience", 0, 3, 300);
+</script>
 </body>
 </html>
